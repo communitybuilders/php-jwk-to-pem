@@ -20,7 +20,7 @@ class Base64UrlDecoder
      * @return string
      * @throws Base64DecodeException
      */
-    public function decode(string $str): string
+    public function decode($str)
     {
         $decoded = base64_decode(strtr($str, '-_', '+/'), true);
         if (!$decoded) {

@@ -25,7 +25,7 @@ class JWKConverter
      * @throws Exception\Base64DecodeException
      * @throws JWKConverterException
      */
-    public function toPEM(array $jwk): string
+    public function toPEM(array $jwk)
     {
         if (!array_key_exists('e', $jwk) || !array_key_exists('n', $jwk) || !array_key_exists('kty', $jwk)) {
             throw new JWKConverterException();
